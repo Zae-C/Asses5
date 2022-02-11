@@ -1,0 +1,17 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+
+float CirArea(float radius);
+
+int main(){
+	float radius=0;
+	cout << "Enter radius:" << endl;
+	cin >> radius;
+	cout << "Your area is: "<<CirArea(radius) << endl;
+}
+
+float CirArea(float radius) {
+	float area = (radius * radius) * 3.14159;
+	return area;
+}
