@@ -1,0 +1,30 @@
+#include<iostream>
+#include<algorithm>
+#include<vector>
+using namespace std;
+
+int main() {
+	int input=1;
+	vector<int> scores;
+	vector<int>::iterator iter;
+
+	cout << "Enter at least 4 numbers or else" << endl;
+	while (input != 0) {
+		cin >> input;
+		scores.push_back(input);
+	}
+
+	cout << "Here are numbers:" << endl;
+	for (iter = scores.begin(); iter != scores.end(); ++iter) {
+		cout << *iter << endl;
+	}
+
+	sort(scores.begin(), scores.end());
+	find(scores.begin(), scores.end(), 5); // Don't know how to check if 5 is there or how to make it print whether it is true or not
+
+	cout << "Here are numbers but in order and wihtout the biggest three numbers" << endl;
+	for (iter = scores.begin(); iter != scores.end()-3; ++iter) {
+		cout << *iter << endl;
+	}
+
+}
